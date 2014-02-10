@@ -19,7 +19,91 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+body { font-family: "Roboto", Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #222222; }
+
+button, input { background: none; font-family: "Roboto", Arial, sans-serif; color: #222222; }
+
+.wrap { display: table; width: 1000px; margin: 0 auto; }
+
+.pager { position: fixed; top: 50%; right: 25px; margin-top: -75px; }
+.pager button { margin: 5px 0; background: white; padding: 7px; border-radius: 50%; border: 1px solid transparent; }
+.pager button.is-active { border-color: #fed564; }
+.pager i { display: block; width: 5px; height: 5px; background: black; border-radius: 50%; }
+
+.page { display: table-row; }
+
+.page__in { position: relative; display: table-cell; width: 1000px; vertical-align: middle; }
+
+.logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sd08666cb21.png') 0 0 no-repeat; width: 287px; height: 341px; }
+
+.enter { float: right; width: 320px; }
+
+.enter__title { font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 55px; }
+
+.enter__title-sub { margin-bottom: 45px; font-size: 24px; }
+
+.enter__label { font-size: 16px; }
+
+.field { margin-bottom: 8px; }
+.field input { width: 100%; border-bottom: #c2c2c2 1px solid; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 24px; }
+.field input:-moz-placeholder, .field input::-moz-placeholder { color: #c2c2c2; opacity: 1; }
+.field input::-webkit-input-placeholder { color: #c2c2c2; }
+
+.enter__btn { padding-top: 15px; *zoom: 1; }
+.enter__btn:after { content: " "; display: table; clear: both; }
+.enter__btn button { height: 35px; }
+
+.enter__go { float: left; width: 225px; background: #fed564; text-transform: uppercase; font-weight: 700; font-size: 14px; }
+
+.enter__cancel { float: right; text-decoration: underline; }
+
+.info__title { margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
+
+.info__sl { width: 910px; height: 530px; margin: 0 auto 40px; background: url(../img/laptop.png) no-repeat 0 0; }
+
+.info__sl-in { width: 695px; margin: 0 auto; padding-top: 30px; font-size: 0; }
+
+.info__more { *zoom: 1; }
+.info__more:after { content: " "; display: table; clear: both; }
+
+.info__more-item { float: left; }
+.info__more-item.is-active { float: none; display: table; }
+.info__more-item.is-active .info__ico-beer { background: url('../img/icons-sd08666cb21.png') 0 -351px no-repeat; width: 130px; height: 130px; }
+.info__more-item.is-active .info__ico-penguin { background: url('../img/icons-sd08666cb21.png') 0 -631px no-repeat; width: 130px; height: 130px; }
+.info__more-item.is-active .info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -491px no-repeat; width: 130px; height: 130px; }
+.info__more-item.is-active .info__text { display: table; }
+
+.info__ico { float: left; margin-right: 15px; }
+
+.info__ico-beer { background: url('../img/icons-sd08666cb21.png') 0 -771px no-repeat; width: 130px; height: 130px; }
+
+.info__ico-penguin { background: url('../img/icons-sd08666cb21.png') 0 -1051px no-repeat; width: 130px; height: 130px; }
+
+.info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -911px no-repeat; width: 130px; height: 130px; }
+
+.info__text { display: none; }
+
+.info__text-title { margin-bottom: 10px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 36px; }
+
+.info__text-in { font-size: 18px; line-height: 1.3; }
+
+.can-help { position: absolute; top: 20px; left: 0; right: 0; text-align: center; overflow: hidden; }
+.can-help span { position: relative; display: inline-block; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; }
+.can-help span:before, .can-help span:after { content: ""; position: absolute; top: 23px; width: 2000px; height: 1px; background: #fed564; }
+.can-help span:before { left: 103%; }
+.can-help span:after { right: 103%; }
+
+.story { width: 460px; margin: 0 auto 140px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; line-height: 1.2; }
+
+.sign-up { font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 55px; text-align: center; }
+.sign-up a { display: inline-block; padding: 0 20px 5px; background: #fed564; text-decoration: none; line-height: 1.2; color: #222222; }
+
+.footer { position: absolute; bottom: 20px; left: 0; right: 0; color: #777777; }
+.footer a { color: #777777; }
+
+.copyright { float: left; }
+
+.footer__support { float: right; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
