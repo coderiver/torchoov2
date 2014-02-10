@@ -27,4 +27,9 @@ $(window).on('resize', function(){
 	page();
 })
 
+
+$('#sl').mousewheel(function(event, delta) {
+	if (delta ) {};
+});
+
 });
