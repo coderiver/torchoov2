@@ -6,8 +6,7 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
@@ -16,85 +15,93 @@
 <body>
 
 <div class="wrap">
-	<div id="p1" class="page">
-		<div class="page__in js-page">
-			<div class="logo"></div>
-			<div class="enter">
-				<div class="enter__title">Get even!</div>
-				<div class="enter__title-sub">A simple and fun way to track your money</div>
-				<div class="enter__form">
-					<label class="enter__label">Enter your login information:</label>
-					<div class="field">
-						<input type="text" placeholder="e-mail">
-					</div>
-					<div class="field">
-						<input type="text" placeholder="password">
-					</div>
-					<div class="enter__btn">
-						<button class="enter__go">Enter the site</button>
-						<button class="enter__cancel">Cancel</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="p2" class="page">
-		<div class="page__in js-page">
-			<div class="info">
-				<div class="info__title">We know you need Torchoo.<br>Let us explain why</div>
-				<div id="#sl" class="info__sl">
-					<div class="info__sl-in">
-						<img src="http://placehold.it/695x435" alt="">
-						<img src="http://placehold.it/695x435" alt="">
-						<img src="http://placehold.it/695x435" alt="">
-					</div>
-				</div>
-				<div class="info__more">
-					<div class="info__more-item">
-						<div class="info__ico info__ico-beer"></div>
-						<div class="info__text">
-							<div class="info__text-title">Split Bills</div>
-							<div class="info__text-in">Imagine you met for happy our and you took the bill but you really need to split it.</div>
+	<div class="wrap__in">
+		<div id="p1" class="page is-active">
+			<div class="page__in js-page">
+				<div class="logo"></div>
+				<div class="enter">
+					<div class="enter__title">Get even!</div>
+					<div class="enter__title-sub">A simple and fun way to track your money</div>
+					<div class="enter__form">
+						<label class="enter__label">Enter your login information:</label>
+						<div class="field">
+							<input type="text" placeholder="e-mail">
 						</div>
-					</div>
-					<div class="info__more-item">
-						<div class="info__ico info__ico-penguin"></div>
-						<div class="info__text">
-							<div class="info__text-title">Lend and owe money</div>
-							<div class="info__text-in">You forgot your wallet traveling across New Zealand and your friend paid for that penguin you always wanted to have.</div>
+						<div class="field">
+							<input type="text" placeholder="password">
 						</div>
-					</div>
-					<div class="info__more-item is-active">
-						<div class="info__ico info__ico-popkorn"></div>
-						<div class="info__text">
-							<div class="info__text-title">Control your balances</div>
-							<div class="info__text-in">That awkward situation when your friend again lacks a couple of dollars to pay for his cinema ticket, because he bought too much popcorn.</div>
+						<div class="enter__btn">
+							<button class="enter__go">Enter the site</button>
+							<button class="enter__cancel">Cancel</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div id="p3" class="page">
-		<div class="page__in js-page">
-			<div class="can-help"><span>Torchoo can help!</span></div>
-			<div class="story">
-				<p>Long story short:</p>
-				<br>
-				<p>Torchoo helps you to keep the balance with your friends. It is social networking tool based on money movement.</p>
+		<div id="p2" class="page">
+			<div class="page__in js-page">
+				<div class="info">
+					<div class="info__title">We know you need Torchoo.<br>Let us explain why</div>
+					<div class="info__sl">
+						<div class="info__sl-in">
+							<img class="info-sl-pic-1 is-active" src="http://lorempixel.com/695/435" alt="">
+							<img class="info-sl-pic-2" src="http://placedog.com/695/435" alt="">
+							<img class="info-sl-pic-3" src="http://placekitten.com/695/435" alt="">
+							<img class="info-sl-pic-4" src="http://lorempixel.com/695/435" alt="">
+							<img class="info-sl-pic-5" src="http://placedog.com/695/435" alt="">
+							<img class="info-sl-pic-6" src="http://placekitten.com/695/435" alt="">
+							<img class="info-sl-pic-7" src="http://lorempixel.com/695/435" alt="">
+							<img class="info-sl-pic-8" src="http://placedog.com/695/435" alt="">
+							<img class="info-sl-pic-9" src="http://placekitten.com/695/435" alt="">
+						</div>
+					</div>
+					<div class="info__more">
+						<div class="info__more-item is-active">
+							<div class="info__ico info__ico-beer"></div>
+							<div class="info__text">
+								<div class="info__text-title">Split Bills</div>
+								<div class="info__text-in">Imagine you met for happy our and you took the bill but you really need to split it.</div>
+							</div>
+						</div>
+						<div class="info__more-item">
+							<div class="info__ico info__ico-penguin"></div>
+							<div class="info__text">
+								<div class="info__text-title">Lend and owe money</div>
+								<div class="info__text-in">You forgot your wallet traveling across New Zealand and your friend paid for that penguin you always wanted to have.</div>
+							</div>
+						</div>
+						<div class="info__more-item">
+							<div class="info__ico info__ico-popkorn"></div>
+							<div class="info__text">
+								<div class="info__text-title">Control your balances</div>
+								<div class="info__text-in">That awkward situation when your friend again lacks a couple of dollars to pay for his cinema ticket, because he bought too much popcorn.</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="sign-up"><a href="#">Sign up</a> and Get even!</div>
-			<footer class="footer">
-				<div class="copyright">© <a href="#">Videogorillas</a>, 2012-2013<br>“Torchoo” and “Get Even” are registered trademarks</div>
-				<a class="footer__support" href="#">Support</a>
-			</footer>
+		</div>
+		<div id="p3" class="page">
+			<div class="page__in js-page">
+				<div class="can-help"><span>Torchoo can help!</span></div>
+				<div class="story">
+					<p>Long story short:</p>
+					<br>
+					<p>Torchoo helps you to keep the balance with your friends. It is social networking tool based on money movement.</p>
+				</div>
+				<div class="sign-up"><a href="#">Sign up</a> and Get even!</div>
+				<footer class="footer">
+					<div class="copyright">© <a href="#">Videogorillas</a>, 2012-2013<br>“Torchoo” and “Get Even” are registered trademarks</div>
+					<a class="footer__support" href="#">Support</a>
+				</footer>
+			</div>
 		</div>
 	</div>
+	<ul class="pager">
+		<li><button class="is-active" data-item="p1"><i></i></button></li>
+		<li><button data-item="p2"><i></i></button></li>
+		<li><button data-item="p3"><i></i></button></li>
+	</ul>
 </div>
-<ul class="pager js-pager">
-	<li><button class="is-active" data-item="p1"><i></i></button></li>
-	<li><button data-item="p2"><i></i></button></li>
-	<li><button data-item="p3"><i></i></button></li>
-</ul>
 </body>
 </html>

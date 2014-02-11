@@ -61,7 +61,7 @@ button, input
 
 
 // common blocks
-.wrap
+.wrap__in
 	display: table
 	width: 1000px
 	margin: 0 auto
@@ -158,17 +158,24 @@ button, input
 	margin: 0 auto 40px
 	background: url(../img/laptop.png) no-repeat 0 0 
 .info__sl-in
+	position: relative
 	width: 695px
 	margin: 0 auto
 	padding-top: 30px
 	font-size: 0
+	img
+		display: none
+		position: absolute
+		top: 30px
+		left: 0
+		&.is-active
+			display: block
 .info__more
 	+clr
 .info__more-item
 	float: left
+	max-width: 710px
 	&.is-active
-		float: none
-		display: table
 		.info__ico-beer
 			+s(info-beer)
 		.info__ico-penguin
