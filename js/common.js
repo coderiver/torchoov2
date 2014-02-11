@@ -64,7 +64,6 @@ wrap.bind('mousewheel', function(event, delta) {
 	}
 	else{
 		//alert('gogogo');
-		body.addClass('is-running');
   	if (delta < 0) {
   		next_level();
   	}
@@ -78,16 +77,14 @@ wrap.bind('mousewheel', function(event, delta) {
   		if ($(this).hasClass('is-active')) {
   			var el_prev = $(this).prev();
   			if (el_prev.length > 0) {
+  				body.addClass('is-running');
   				var el_top = el_prev.offset().top;
   				body.animate({scrollTop: el_top}, 300, function(){
   					body.removeClass('is-running');
   					el.removeClass('is-active');
   					el_prev.addClass('is-active');
   				});
-  			}
-  			else{
-  				body.removeClass('is-running');
-  			}
+  			};
   		};
   	})
   }
@@ -97,6 +94,7 @@ wrap.bind('mousewheel', function(event, delta) {
   		if ($(this).hasClass('is-active')) {
   			var el_next = $(this).next();
   			if (el_next.length > 0) {
+  				body.addClass('is-running');
   				var el_top = el_next.offset().top;
   				body.animate({scrollTop: el_top}, 300, function(){
   					body.removeClass('is-running');
@@ -104,10 +102,7 @@ wrap.bind('mousewheel', function(event, delta) {
   					el_next.addClass('is-active');
   				});
   			};
-  		}
-  		else{
-  			body.removeClass('is-running');
-  		}
+  		};
   	})
   }
   return false;
