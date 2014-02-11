@@ -16,8 +16,8 @@
 
 <div class="wrap">
 	<div class="wrap__in">
-		<div id="p1" class="page is-active">
-			<div class="page__in js-page">
+		<div id="page-first" class="page">
+			<div class="page__in">
 				<div class="logo"></div>
 				<div class="enter">
 					<div class="enter__title">Get even!</div>
@@ -38,39 +38,39 @@
 				</div>
 			</div>
 		</div>
-		<div id="p2" class="page">
-			<div class="page__in js-page">
+		<div id="page-second" class="page">
+			<div class="page__in">
 				<div class="info">
 					<div class="info__title">We know you need Torchoo.<br>Let us explain why</div>
 					<div class="info__sl">
 						<div class="info__sl-in">
-							<img class="info-sl-pic-1 is-active" src="http://lorempixel.com/695/435" alt="">
-							<img class="info-sl-pic-2" src="http://placedog.com/695/435" alt="">
-							<img class="info-sl-pic-3" src="http://placekitten.com/695/435" alt="">
-							<img class="info-sl-pic-4" src="http://lorempixel.com/695/435" alt="">
-							<img class="info-sl-pic-5" src="http://placedog.com/695/435" alt="">
-							<img class="info-sl-pic-6" src="http://placekitten.com/695/435" alt="">
-							<img class="info-sl-pic-7" src="http://lorempixel.com/695/435" alt="">
-							<img class="info-sl-pic-8" src="http://placedog.com/695/435" alt="">
-							<img class="info-sl-pic-9" src="http://placekitten.com/695/435" alt="">
+							<img src="http://lorempixel.com/695/435" alt="">
+							<img src="http://placedog.com/695/435" alt="">
+							<img src="http://placekitten.com/695/435" alt="">
+							<img src="http://lorempixel.com/695/435" alt="">
+							<img src="http://placedog.com/695/435" alt="">
+							<img src="http://placekitten.com/695/435" alt="">
+							<img src="http://lorempixel.com/695/435" alt="">
+							<img src="http://placedog.com/695/435" alt="">
+							<img src="http://placekitten.com/695/435" alt="">
 						</div>
 					</div>
 					<div class="info__more">
-						<div class="info__more-item is-active">
+						<div id="info-beer" class="info__more-item is-active">
 							<div class="info__ico info__ico-beer"></div>
 							<div class="info__text">
 								<div class="info__text-title">Split Bills</div>
 								<div class="info__text-in">Imagine you met for happy our and you took the bill but you really need to split it.</div>
 							</div>
 						</div>
-						<div class="info__more-item">
+						<div id="info-penguin" class="info__more-item">
 							<div class="info__ico info__ico-penguin"></div>
 							<div class="info__text">
 								<div class="info__text-title">Lend and owe money</div>
 								<div class="info__text-in">You forgot your wallet traveling across New Zealand and your friend paid for that penguin you always wanted to have.</div>
 							</div>
 						</div>
-						<div class="info__more-item">
+						<div id="info-popkorn" class="info__more-item">
 							<div class="info__ico info__ico-popkorn"></div>
 							<div class="info__text">
 								<div class="info__text-title">Control your balances</div>
@@ -81,8 +81,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="p3" class="page">
-			<div class="page__in js-page">
+		<div id="page-third" class="page">
+			<div class="page__in">
 				<div class="can-help"><span>Torchoo can help!</span></div>
 				<div class="story">
 					<p>Long story short:</p>
@@ -98,9 +98,11 @@
 		</div>
 	</div>
 	<ul class="pager">
-		<li><button class="is-active" data-item="p1"><i></i></button></li>
-		<li><button data-item="p2"><i></i></button></li>
-		<li><button data-item="p3"><i></i></button></li>
+		<li><button class="is-active" data-item="page-first"><i></i></button></li>
+		<li><button data-item="page-second" data-slider="info-beer"><i></i></button></li>
+		<li><button data-item="page-second" data-slider="info-penguin"><i></i></button></li>
+		<li><button data-item="page-second" data-slider="info-popkorn"><i></i></button></li>
+		<li><button data-item="page-third"><i></i></button></li>
 	</ul>
 </div>
 </body>

@@ -32,7 +32,9 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .page { display: table-row; }
 
-.page__in { position: relative; display: table-cell; width: 1000px; vertical-align: middle; }
+.page__in { position: relative; display: table-cell; width: 1000px; vertical-align: middle; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+#page-second .page__in { padding-top: 136px; }
 
 .logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sd08666cb21.png') 0 0 no-repeat; width: 287px; height: 341px; }
 
@@ -57,7 +59,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .enter__cancel { float: right; text-decoration: underline; }
 
-.info__title { margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
+.info__title { position: absolute; top: 20px; left: 0; right: 0; margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
 
 .info__sl { width: 910px; height: 530px; margin: 0 auto 40px; background: url(../img/laptop.png) no-repeat 0 0; }
 
@@ -72,7 +74,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .info__more-item.is-active .info__ico-beer { background: url('../img/icons-sd08666cb21.png') 0 -351px no-repeat; width: 130px; height: 130px; }
 .info__more-item.is-active .info__ico-penguin { background: url('../img/icons-sd08666cb21.png') 0 -631px no-repeat; width: 130px; height: 130px; }
 .info__more-item.is-active .info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -491px no-repeat; width: 130px; height: 130px; }
-.info__more-item.is-active .info__text { display: table; }
+.info__more-item.is-active .info__text { display: block; }
 
 .info__ico { float: left; margin-right: 15px; }
 
@@ -82,7 +84,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -911px no-repeat; width: 130px; height: 130px; }
 
-.info__text { display: none; }
+.info__text { display: none; padding-right: 20px; overflow: hidden; }
 
 .info__text-title { margin-bottom: 10px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 36px; }
 

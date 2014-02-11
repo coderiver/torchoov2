@@ -96,6 +96,10 @@ button, input
 	display: table-cell
 	width: 1000px
 	vertical-align: middle
+	+box
+#page-second
+	.page__in
+		padding-top: 136px
 
 
 .logo
@@ -147,6 +151,10 @@ button, input
 
 
 .info__title	
+	position: absolute
+	top: 20px
+	left: 0
+	right: 0
 	margin-bottom: 40px
 	+fs
 	font-size: 32px
@@ -183,7 +191,7 @@ button, input
 		.info__ico-popkorn
 			+s(info-popkorn)
 		.info__text
-			display: table
+			display: block
 .info__ico	
 	float: left
 	margin-right: 15px
@@ -195,6 +203,8 @@ button, input
 	+s(info-popkorn-a)
 .info__text
 	display: none
+	padding-right: 20px
+	overflow: hidden
 .info__text-title
 	margin-bottom: 10px
 	+fs
