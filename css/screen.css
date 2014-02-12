@@ -25,7 +25,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .wrap__in { display: table; width: 1000px; margin: 0 auto; }
 
-.pager { position: fixed; top: 50%; right: 25px; margin-top: -75px; }
+.pager { position: fixed; top: 50%; right: 25px; width: 21px; margin-top: -75px; }
 .pager button { margin: 5px 0; background: white; padding: 7px; border-radius: 50%; border: 1px solid transparent; }
 .pager button.is-active { border-color: #fed564; }
 .pager i { display: block; width: 5px; height: 5px; background: black; border-radius: 50%; }

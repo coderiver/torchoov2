@@ -6,7 +6,7 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
@@ -45,30 +45,36 @@
 					<div class="info__sl">
 						<div class="info__sl-in">
 							<!-- beer -->
-							<img src="img/beer1.jpg" alt="">
-							<img src="img/beer2.jpg" alt="">
-							<img src="img/beer3.jpg" alt="">
-							<img src="img/beer4.jpg" alt="">
-							<img src="img/beer5.jpg" alt="">
-							<img src="img/beer6.jpg" alt="">
-							<img src="img/beer7.jpg" alt="">
-							<img src="img/beer8.jpg" alt="">
-							<img src="img/beer9.jpg" alt="">
-							<img src="img/beer10.jpg" alt="">
-							<img src="img/beer11.jpg" alt="">
-							<img src="img/beer12.jpg" alt="">
-							<img src="img/beer13.jpg" alt="">
-							<img src="img/beer14.jpg" alt="">
-							<img src="img/beer15.jpg" alt="">
+							<div class="info__sl-beer">
+								<img src="img/beer1.jpg" alt="">
+								<img src="img/beer2.jpg" alt="">
+								<img src="img/beer3.jpg" alt="">
+								<img src="img/beer4.jpg" alt="">
+								<img src="img/beer5.jpg" alt="">
+								<img src="img/beer6.jpg" alt="">
+								<img src="img/beer7.jpg" alt="">
+								<img src="img/beer8.jpg" alt="">
+								<img src="img/beer9.jpg" alt="">
+								<img src="img/beer10.jpg" alt="">
+								<img src="img/beer11.jpg" alt="">
+								<img src="img/beer12.jpg" alt="">
+								<img src="img/beer13.jpg" alt="">
+								<img src="img/beer14.jpg" alt="">
+								<img src="img/beer15.jpg" alt="">
+							</div>
 							<!-- penguin -->
-							<img src="img/penguin1.jpg" alt="">
-							<img src="img/penguin2.jpg" alt="">
-							<img src="img/penguin3.jpg" alt="">
-							<img src="img/penguin4.jpg" alt="">
+							<div class="info__sl-penguin">
+								<img src="img/penguin1.jpg" alt="">
+								<img src="img/penguin2.jpg" alt="">
+								<img src="img/penguin3.jpg" alt="">
+								<img src="img/penguin4.jpg" alt="">
+							</div>
 							<!-- popkorn -->
-							<img src="img/popkorn1.jpg" alt="">
-							<img src="img/popkorn2.jpg" alt="">
-							<img src="img/popkorn3.jpg" alt="">
+							<div class="info__sl-popkorn">
+								<img src="img/popkorn1.jpg" alt="">
+								<img src="img/popkorn2.jpg" alt="">
+								<img src="img/popkorn3.jpg" alt="">
+							</div>
 						</div>
 					</div>
 					<div class="info__more">
@@ -113,13 +119,13 @@
 			</div>
 		</div>
 	</div>
-	<ul class="pager">
-		<li><button class="is-active" data-item="page-first"><i></i></button></li>
-		<li><button data-item="page-second" data-slider="info-beer"><i></i></button></li>
-		<li><button data-item="page-second" data-slider="info-penguin"><i></i></button></li>
-		<li><button data-item="page-second" data-slider="info-popkorn"><i></i></button></li>
-		<li><button data-item="page-third"><i></i></button></li>
-	</ul>
+	<div class="pager">
+		<button class="is-active" data-item="page-first"><i></i></button>
+		<button data-item="page-second" data-slider="info-beer"><i></i></button>
+		<button data-item="page-second" data-slider="info-penguin"><i></i></button>
+		<button data-item="page-second" data-slider="info-popkorn"><i></i></button>
+		<button data-item="page-third"><i></i></button>
+	</div>
 </div>
 </body>
 </html>

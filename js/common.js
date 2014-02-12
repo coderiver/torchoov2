@@ -18,7 +18,9 @@ function pager() {
 		$(this).addClass('is-active');
 		var item = $(this).attr('data-item');
 		var top = $('#'+item).offset().top;
-		$('body').animate({scrollTop: top}, 500);			
+		$('body').animate({scrollTop: top}, 300, function() {
+			body.removeClass('is-running');
+		});			
 		if ($(this).attr('data-slider')) {
 			var sl_attr = $(this).attr('data-slider');
 			$('.info__more-item').removeClass('is-active');
@@ -31,6 +33,51 @@ pager();
 
 
 
+var body = $('body');
+var wrap = $('.wrap');
+
+var counter = 0;
+
+wrap.bind('mousewheel', function(event, delta) {
+
+	if (body.hasClass('is-running')) {
+		//alert('i am runnig dont talk to me');
+	}
+	else{
+		//alert('go!');
+		body.addClass('is-running');
+  	if (delta < 0) {
+  		var pager_btn_act = $('.pager button.is-active').next();
+  		if (pager_btn_act.length) {
+  			pager_btn_act.removeClass('is-active').trigger('click', function(){
+  				$(this).addClass('is-active');
+  			});
+  		}
+  		else{
+  			body.removeClass('is-running');
+  		}
+  	}
+  	else {
+  		var pager_btn_act = $('.pager button.is-active').prev();
+  		if (pager_btn_act.length) {
+  			pager_btn_act.removeClass('is-active').trigger('click', function(){
+  				$(this).addClass('is-active');
+  			});
+  		}
+  		else{
+  			body.removeClass('is-running');
+  		}
+  	}
+  }
+
+ 
+  return false;
+});
+
+
+
+
+
 $(window).on('resize', function(){
 	page();
 })
@@ -38,44 +85,6 @@ $(window).on('resize', function(){
 $(window).on('scroll', function(){
 	
 })
-
-var body = $('body');
-var wrap = $('.wrap');
-
-var counter = 0;
-
-wrap.bind('mousewheel', function(event, delta) {
-	
-	if (body.hasClass('is-running')) {
-		//alert('i am runnig dont talk to me');
-	}
-	else{
-		//alert('gogogo');
-		body.addClass('is-running');
-  	if (delta < 0) {
-  		//next_level();
-  	}
-  	else {
-  		//prev_level();
-  	}
-  }
-  function next_level() {
-
-  	body.animate({scrollTop: top_p2}, 300, function(){
-  		body.removeClass('is-running');
-  	});
-  }
-  function next_level() {
-  	
-  	body.animate({scrollTop: top_p2}, 300, function(){
-  		body.removeClass('is-running');
-  	});
-  }
-  //return false;
-});
-
-
-
 
 
 
