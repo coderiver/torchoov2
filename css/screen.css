@@ -19,7 +19,7 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: "Roboto", Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #222222; }
+body { font-family: "Roboto", Arial, sans-serif; font-size: 12px; line-height: 1.4; color: #222222; overflow: hidden; }
 
 button, input { background: none; font-family: "Roboto", Arial, sans-serif; color: #222222; }
 
@@ -36,7 +36,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 #page-second .page__in { padding-top: 136px; }
 
-.logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sd08666cb21.png') 0 0 no-repeat; width: 287px; height: 341px; }
+.logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sc5b19da40d.png') 0 0 no-repeat; width: 287px; height: 341px; }
 
 .enter { float: right; width: 320px; }
 
@@ -59,38 +59,53 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .enter__cancel { float: right; text-decoration: underline; }
 
+.info { *zoom: 1; }
+.info:after { content: " "; display: table; clear: both; }
+
+.info__sl { position: relative; float: right; width: 727px; height: 423px; margin-right: -100px; background: url(../img/laptop.png) no-repeat 0 0; }
+.info__sl.is-left { right: 70px; margin: 0; }
+
+.info__sl-in { position: relative; width: 555px; height: 347px; margin: 24px 0 0 87px; }
+.info__sl-in > li { display: none; }
+.info__sl-in > li.is-active { display: block; }
+
+.info__sl-step { position: absolute; top: 0; left: 0; visibility: hidden; -webkite-perspective: 800px; }
+.info__sl-step.is-active { visibility: visible; }
+.info__sl-step img { display: block; }
+
 .info__title { position: absolute; top: 20px; left: 0; right: 0; margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
 
-.info__sl { width: 910px; height: 530px; margin: 0 auto 40px; background: url(../img/laptop.png) no-repeat 0 0; }
+.info__more { float: left; }
 
-.info__sl-in { position: relative; width: 695px; margin: 0 auto; padding-top: 30px; font-size: 0; }
-.info__sl-in li { display: none; }
-.info__sl-in li.is-active { display: block; }
-.info__sl-in img { display: none; position: absolute; top: 30px; left: 0; }
-.info__sl-in img.is-active { display: block; }
+.info__more { float: left; width: 260px; }
 
-.info__more { *zoom: 1; }
-.info__more:after { content: " "; display: table; clear: both; }
+.info__icons { margin-bottom: 25px; font-size: 0; }
 
-.info__more-item { float: left; max-width: 710px; }
-.info__more-item.is-active .info__ico-beer { background: url('../img/icons-sd08666cb21.png') 0 -351px no-repeat; width: 130px; height: 130px; }
-.info__more-item.is-active .info__ico-penguin { background: url('../img/icons-sd08666cb21.png') 0 -631px no-repeat; width: 130px; height: 130px; }
-.info__more-item.is-active .info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -491px no-repeat; width: 130px; height: 130px; }
-.info__more-item.is-active .info__text { display: block; }
+.info__ico { display: inline-block; margin-left: 30px; vertical-align: middle; }
+.info__ico:first-child { margin: 0; }
 
-.info__ico { float: left; margin-right: 15px; }
+.info__ico_beer { background: url('../img/icons-sc5b19da40d.png') 0 -554px no-repeat; width: 50px; height: 59px; }
+.info__ico_beer.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -351px no-repeat; width: 50px; height: 59px; }
 
-.info__ico-beer { background: url('../img/icons-sd08666cb21.png') 0 -771px no-repeat; width: 130px; height: 130px; }
+.info__ico_penguin { background: url('../img/icons-sc5b19da40d.png') 0 -691px no-repeat; width: 54px; height: 56px; }
+.info__ico_penguin.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -488px no-repeat; width: 54px; height: 56px; }
 
-.info__ico-penguin { background: url('../img/icons-sd08666cb21.png') 0 -1051px no-repeat; width: 130px; height: 130px; }
+.info__ico_popkorn { background: url('../img/icons-sc5b19da40d.png') 0 -623px no-repeat; width: 47px; height: 58px; }
+.info__ico_popkorn.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -420px no-repeat; width: 47px; height: 58px; }
 
-.info__ico-popkorn { background: url('../img/icons-sd08666cb21.png') 0 -911px no-repeat; width: 130px; height: 130px; }
+.info__text-item { display: none; }
+.info__text-item.is-active { display: block; }
 
-.info__text { display: none; padding-right: 20px; overflow: hidden; }
+.info__text-title { margin-bottom: 20px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 36px; line-height: 1; }
 
-.info__text-title { margin-bottom: 10px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 36px; }
+.info__text-in { font-size: 18px; line-height: 1.2; }
 
-.info__text-in { font-size: 18px; line-height: 1.3; }
+.info__sl-ttip { position: absolute; left: -160px; font-size: 0; }
+.info__sl-ttip i, .info__sl-ttip span { display: inline-block; vertical-align: middle; }
+.info__sl-ttip i { width: 0px; height: 0px; border-style: solid; border-width: 13px 0 13px 13px; border-color: transparent transparent transparent #fed564; }
+.info__sl-ttip span { width: 160px; padding: 3px 10px 4px; background: #fed564; font-size: 14px; }
+.info__sl-ttip.is-right { left: auto; right: -155px; }
+.info__sl-ttip.is-right i { border-style: solid; border-width: 13px 13px 13px 0; border-color: transparent #fed564 transparent transparent; }
 
 .can-help { position: absolute; top: 20px; left: 0; right: 0; text-align: center; overflow: hidden; }
 .can-help span { position: relative; display: inline-block; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; }
