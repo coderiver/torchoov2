@@ -160,7 +160,8 @@ button, input
 	height: 423px
 	margin-right: -100px
 	background: url(../img/laptop.png) no-repeat 0 0
-	&.is-left
+	+tr(all .2s linear)
+	&.is-move
 		right: 70px
 		margin: 0
 .info__sl-in
@@ -169,13 +170,13 @@ button, input
 	height: 347px
 	margin: 24px 0 0 87px 
 	>li
-		display: none
+		visibility: hidden
 		&.is-active
-			display: block
-			//.info__sl-step
-			//	&.is-active
-			//		.info__sl-ttip
-			//			+transform(rotateX(0deg))
+			visibility: visible
+			.info__sl-step
+				&.is-active
+					.info__sl-ttip
+						+transform(rotateX(0deg))
 .info__sl-step
 	position: absolute
 	top: 0
@@ -184,6 +185,10 @@ button, input
 	-webkite-perspective: 800px
 	&.is-active
 		visibility: visible
+		.info__sl-current
+			top: -20px
+			visibility: visible
+			opacity: 1 
 	img
 		display: block
 .info__title	
@@ -244,15 +249,16 @@ button, input
 	position: absolute
 	left: -160px
 	font-size: 0
-	//+transform-style(preserve-3d)
-	//+transition(transform .3s)
-	//+transform(rotateX(90deg))
-	i, span
+	+transform-style(preserve-3d)
+	+transform(rotateX(90deg))
+	+transition(transform .3s)
+	z-index: 10 
+	i, >span
 		display: inline-block
 		vertical-align: middle
 	i
 		+arr(13,26,#fed564,r)
-	span
+	>span
 		width: 160px
 		padding: 3px 10px 4px
 		background: #FED564 
@@ -264,7 +270,18 @@ button, input
 			border-style: solid
 			border-width: 13px 13px 13px 0
 			border-color: transparent #fed564 transparent transparent
-
+		.info__sl-current
+			left: auto
+			right: 0
+.info__sl-current
+	position: absolute
+	top: -10px
+	left: 0
+	visibility: hidden
+	opacity: 0 
+	font-size: 12px
+	color: #a6a6a6
+	+tr(all .2s linear)  
 
 
 .can-help

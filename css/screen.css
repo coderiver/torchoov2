@@ -63,15 +63,17 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .info { *zoom: 1; }
 .info:after { content: " "; display: table; clear: both; }
 
-.info__sl { position: relative; float: right; width: 727px; height: 423px; margin-right: -100px; background: url(../img/laptop.png) no-repeat 0 0; }
-.info__sl.is-left { right: 70px; margin: 0; }
+.info__sl { position: relative; float: right; width: 727px; height: 423px; margin-right: -100px; background: url(../img/laptop.png) no-repeat 0 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.info__sl.is-move { right: 70px; margin: 0; }
 
 .info__sl-in { position: relative; width: 555px; height: 347px; margin: 24px 0 0 87px; }
-.info__sl-in > li { display: none; }
-.info__sl-in > li.is-active { display: block; }
+.info__sl-in > li { visibility: hidden; }
+.info__sl-in > li.is-active { visibility: visible; }
+.info__sl-in > li.is-active .info__sl-step.is-active .info__sl-ttip { -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); -ms-transform: rotateX(0deg); -o-transform: rotateX(0deg); transform: rotateX(0deg); }
 
 .info__sl-step { position: absolute; top: 0; left: 0; visibility: hidden; -webkite-perspective: 800px; }
 .info__sl-step.is-active { visibility: visible; }
+.info__sl-step.is-active .info__sl-current { top: -20px; visibility: visible; opacity: 1; }
 .info__sl-step img { display: block; }
 
 .info__title { position: absolute; top: 20px; left: 0; right: 0; margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
@@ -103,12 +105,15 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 .info__text-in { font-size: 18px; line-height: 1.2; }
 
-.info__sl-ttip { position: absolute; left: -160px; font-size: 0; }
-.info__sl-ttip i, .info__sl-ttip span { display: inline-block; vertical-align: middle; }
+.info__sl-ttip { position: absolute; left: -160px; font-size: 0; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: rotateX(90deg); -moz-transform: rotateX(90deg); -ms-transform: rotateX(90deg); -o-transform: rotateX(90deg); transform: rotateX(90deg); -webkit-transition: -webkit-transform 0.3s; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; transition: transform 0.3s; z-index: 10; }
+.info__sl-ttip i, .info__sl-ttip > span { display: inline-block; vertical-align: middle; }
 .info__sl-ttip i { width: 0px; height: 0px; border-style: solid; border-width: 13px 0 13px 13px; border-color: transparent transparent transparent #fed564; }
-.info__sl-ttip span { width: 160px; padding: 3px 10px 4px; background: #fed564; font-size: 14px; }
+.info__sl-ttip > span { width: 160px; padding: 3px 10px 4px; background: #fed564; font-size: 14px; }
 .info__sl-ttip.is-right { left: auto; right: -155px; }
 .info__sl-ttip.is-right i { border-style: solid; border-width: 13px 13px 13px 0; border-color: transparent #fed564 transparent transparent; }
+.info__sl-ttip.is-right .info__sl-current { left: auto; right: 0; }
+
+.info__sl-current { position: absolute; top: -10px; left: 0; visibility: hidden; opacity: 0; font-size: 12px; color: #a6a6a6; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
 
 .can-help { position: absolute; top: 20px; left: 0; right: 0; text-align: center; overflow: hidden; }
 .can-help a { position: relative; display: inline-block; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-decoration: none; color: black; }
