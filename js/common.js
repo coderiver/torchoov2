@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+var body = $('body'),
+		wrap = $('.wrap'),
+		pager = $('.pager'),
+		info_sl = $('.info__sl-in');
 
 function page () {
 	var wnd_height = $(window).height();
@@ -10,15 +14,15 @@ function page () {
 page();
 
 //nav
-function pager() {
+function pager_nav() {
 	var el = $('.pager');
 	link = el.find('button');
 	link.on('click', function(){
 		link.removeClass('is-active');
 		$(this).addClass('is-active');
-		var item = $(this).attr('data-item');
-		var top = $('#'+item).offset().top;
-		$('body').animate({scrollTop: top}, 300, function() {
+		var item = $(this).attr('data-item'),
+				top = $('#'+item).offset().top;
+		$('body').animate({scrollTop: top}, 500, 'easeInOutQuart', function() {
 			body.removeClass('is-running');
 		});			
 		if ($(this).attr('data-slider')) {
@@ -31,16 +35,28 @@ function pager() {
 		return false;
 	});	
 }
-pager();
+pager_nav();
 
-
-var body = $('body');
-var wrap = $('.wrap');
-var pager = $('.pager');
-var info_sl = $('.info__sl-in');
+function go_step() {
+	var go = $('.js-go-step');
+	go.on('click', function(){
+		var	go_attr = $(this).data('step'),
+				top = $('#'+go_attr).offset().top,
+				pager_btn = pager.find('button');
+		pager_btn.removeClass('is-active');
+		pager_btn.each(function(){
+			var pager_item = $(this).data('item');
+			if (pager_item == go_attr) {
+				$(this).addClass('is-active');
+			};
+		});
+		$('body').animate({scrollTop: top}, 500, 'easeInOutQuart');
+		return false;	
+	});	
+}
+go_step();
 
 wrap.bind('mousewheel', function(event, delta) {
-
 	if (body.hasClass('is-running')) {
 		//alert('i am runnig dont talk to me');
 	}

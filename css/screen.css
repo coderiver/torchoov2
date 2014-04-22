@@ -26,8 +26,9 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .wrap__in { display: table; width: 1000px; margin: 0 auto; }
 
 .pager { position: fixed; top: 50%; right: 25px; width: 21px; margin-top: -75px; }
-.pager button { margin: 5px 0; background: white; padding: 7px; border-radius: 50%; border: 1px solid transparent; }
-.pager button.is-active { border-color: #fed564; }
+.pager button { margin: 5px 0; background: white; padding: 7px; border-radius: 50%; background: none; }
+.pager button.is-active { background: #fed564; }
+.pager button.is-active i { background: white; }
 .pager i { display: block; width: 5px; height: 5px; background: black; border-radius: 50%; }
 
 .page { display: table-row; }
@@ -36,7 +37,7 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 
 #page-second .page__in { padding-top: 136px; }
 
-.logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sc5b19da40d.png') 0 0 no-repeat; width: 287px; height: 341px; }
+.logo { position: relative; top: -100px; display: inline-block; margin-left: 140px; background: url('../img/icons-sb67e9d9fb3.png') 0 0 no-repeat; width: 287px; height: 341px; }
 
 .enter { float: right; width: 320px; }
 
@@ -74,6 +75,8 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .info__sl-step img { display: block; }
 
 .info__title { position: absolute; top: 20px; left: 0; right: 0; margin-bottom: 40px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-align: center; line-height: 1.2; }
+.info__title span, .info__title i { display: inline-block; vertical-align: middle; }
+.info__title i { margin-left: 20px; background: url('../img/icons-sb67e9d9fb3.png') 0 -757px no-repeat; width: 24px; height: 56px; }
 
 .info__more { float: left; }
 
@@ -84,14 +87,14 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .info__ico { display: inline-block; margin-left: 30px; vertical-align: middle; }
 .info__ico:first-child { margin: 0; }
 
-.info__ico_beer { background: url('../img/icons-sc5b19da40d.png') 0 -554px no-repeat; width: 50px; height: 59px; }
-.info__ico_beer.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -351px no-repeat; width: 50px; height: 59px; }
+.info__ico_beer { background: url('../img/icons-sb67e9d9fb3.png') 0 -554px no-repeat; width: 50px; height: 59px; }
+.info__ico_beer.is-active { background: url('../img/icons-sb67e9d9fb3.png') 0 -351px no-repeat; width: 50px; height: 59px; }
 
-.info__ico_penguin { background: url('../img/icons-sc5b19da40d.png') 0 -691px no-repeat; width: 54px; height: 56px; }
-.info__ico_penguin.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -488px no-repeat; width: 54px; height: 56px; }
+.info__ico_penguin { background: url('../img/icons-sb67e9d9fb3.png') 0 -691px no-repeat; width: 54px; height: 56px; }
+.info__ico_penguin.is-active { background: url('../img/icons-sb67e9d9fb3.png') 0 -488px no-repeat; width: 54px; height: 56px; }
 
-.info__ico_popkorn { background: url('../img/icons-sc5b19da40d.png') 0 -623px no-repeat; width: 47px; height: 58px; }
-.info__ico_popkorn.is-active { background: url('../img/icons-sc5b19da40d.png') 0 -420px no-repeat; width: 47px; height: 58px; }
+.info__ico_popkorn { background: url('../img/icons-sb67e9d9fb3.png') 0 -623px no-repeat; width: 47px; height: 58px; }
+.info__ico_popkorn.is-active { background: url('../img/icons-sb67e9d9fb3.png') 0 -420px no-repeat; width: 47px; height: 58px; }
 
 .info__text-item { display: none; }
 .info__text-item.is-active { display: block; }
@@ -108,10 +111,10 @@ button, input { background: none; font-family: "Roboto", Arial, sans-serif; colo
 .info__sl-ttip.is-right i { border-style: solid; border-width: 13px 13px 13px 0; border-color: transparent #fed564 transparent transparent; }
 
 .can-help { position: absolute; top: 20px; left: 0; right: 0; text-align: center; overflow: hidden; }
-.can-help span { position: relative; display: inline-block; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; }
-.can-help span:before, .can-help span:after { content: ""; position: absolute; top: 23px; width: 2000px; height: 1px; background: #fed564; }
-.can-help span:before { left: 103%; }
-.can-help span:after { right: 103%; }
+.can-help a { position: relative; display: inline-block; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; text-decoration: none; color: black; }
+.can-help a:before, .can-help a:after { content: ""; position: absolute; top: 23px; width: 2000px; height: 1px; background: #fed564; }
+.can-help a:before { left: 103%; }
+.can-help a:after { right: 103%; }
 
 .story { width: 460px; margin: 0 auto 140px; font-family: "Roboto Slab", Arial, sans-serif; font-weight: 300; font-size: 32px; line-height: 1.2; }
 

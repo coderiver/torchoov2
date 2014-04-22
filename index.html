@@ -10,10 +10,10 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.easing.1.3.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
-
 <div class="wrap">
 	<div class="wrap__in">
 		<div id="page-first" class="page">
@@ -41,13 +41,13 @@
 		<div id="page-second" class="page">
 			<div class="page__in">
 				<div class="info">
-					<div class="info__title">We know you need Torchoo.<br>Let us explain why</div>
+					<div class="info__title"><span>We know you need Torchoo.<br>Let us explain why</span><i></i></div>
 					<!-- categories -->
 					<div class="info__more">
 						<div class="info__icons">
-							<div class="js-beer info__ico info__ico_beer is-active"></div>
-							<div class="js-penguin info__ico info__ico_penguin"></div>
-							<div class="js-popkorn info__ico info__ico_popkorn"></div>
+							<div class="info__ico info__ico_beer js-beer is-active"></div>
+							<div class="info__ico info__ico_penguin js-penguin"></div>
+							<div class="info__ico info__ico_popkorn js-popkorn"></div>
 						</div>
 						<div class="info__text">
 							<div class="js-beer info__text-item is-active">
@@ -121,7 +121,7 @@
 		</div>
 		<div id="page-third" class="page">
 			<div class="page__in">
-				<div class="can-help"><span>Torchoo can help!</span></div>
+				<div class="can-help js-go-step" data-step="page-third"><a href="#">Torchoo can help!</a></div>
 				<div class="story">
 					<p>Long story short:</p>
 					<br>
