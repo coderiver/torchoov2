@@ -63,6 +63,22 @@ function go_step() {
 }
 go_step();
 
+function threep() {
+	var el = $('.js-info-types');
+	el.find('.info__ico').on('click', function(){
+		var item = $(this).data('trigger');
+		console.log(item);
+		pager.find('button').each(function(){
+			var btn = $(this).data('slider');
+			console.log(btn);
+			if (item == btn) {
+				$(this).trigger('click');
+			};
+		});
+	});
+}
+threep();
+
 wrap.bind('mousewheel', function(event, delta) {
 	if (body.hasClass('is-running')) {
 		//alert('i am runnig dont talk to me');
